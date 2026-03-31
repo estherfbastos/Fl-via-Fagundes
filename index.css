@@ -106,27 +106,9 @@ a {
     gap: 1.5rem;
 }
   
-  @keyframes shine {
-    0% {
-      left: -100px;
-    }
-  
-    60% {
-      left: 100%;
-    }
-  
-    to {
-      left: 100%;
-    }
-  }
-  
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: "Montserrat", sans-serif;
+img, video {
+  max-width: 100%;
+  display: block;
 }
 
 @import url('https://fonts.cdnfonts.com/css/apple-garamond');
@@ -775,12 +757,21 @@ html {
 #sobre-invertido .image-invertido {
     min-height: 400px;
     background-image: url('./assets/eparavoce.jpg');
-    background-size: 100%;
-    background-position: center 0%;
+    background-size: cover; /* 🔥 CORREÇÃO PRINCIPAL */
+    background-position: center;
     background-repeat: no-repeat;
 
-    /* 👇 invertido */
     border-radius: 60px 0px 0px 60px;
+}
+
+@media (min-width: 1080px) {
+    #sobre-invertido .content {
+        align-items: stretch; /* 🔥 garante altura igual */
+    }
+
+    #sobre-invertido .image-invertido {
+        height: 100%;
+    }
 }
 
 /* TEXTO */
@@ -1150,26 +1141,4 @@ html {
   .servico-text {
     padding: 4rem;
   }
-}
-
-/* =========================
-   💎 BOTÃO SERVIÇOS
-========================= */
-
-.btn-servico {
-  margin-top: 2rem;
-  max-width: 320px;
-}
-
-/* deixa mais elegante e menos "agressivo" */
-.btn-servico {
-  background: linear-gradient(135deg, #5E0006, #7a0a10);
-  color: #fff;
-  border: 1px solid #ffffff22;
-}
-
-/* hover refinado */
-.btn-servico:hover {
-  background: linear-gradient(135deg, #430205, #600000);
-  transform: scale(1.03);
 }
