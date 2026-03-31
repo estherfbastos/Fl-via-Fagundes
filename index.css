@@ -8,7 +8,9 @@ a {
 }
 
 .button {
-    align-self: left;
+   align-self: flex-start;
+    width: 100%;
+    max-width: 320px;
     min-width: 220px;
 
     font-family: 'Paralucent-Medium', sans-serif;
@@ -318,7 +320,8 @@ html {
 }
 
 #home .text {
-  margin-top: 110%;
+margin-top: 0;
+  padding-top: 6rem;
   text-align: center;
   position: relative;
   z-index: 4;
@@ -1141,4 +1144,12 @@ html {
   .servico-text {
     padding: 4rem;
   }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  overflow-x: hidden;
 }
