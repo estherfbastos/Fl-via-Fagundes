@@ -1151,3 +1151,25 @@ html {
     padding: 4rem;
   }
 }
+
+/* =========================
+   💎 BOTÃO SERVIÇOS
+========================= */
+
+.btn-servico {
+  margin-top: 2rem;
+  max-width: 320px;
+}
+
+/* deixa mais elegante e menos "agressivo" */
+.btn-servico {
+  background: linear-gradient(135deg, #5E0006, #7a0a10);
+  color: #fff;
+  border: 1px solid #ffffff22;
+}
+
+/* hover refinado */
+.btn-servico:hover {
+  background: linear-gradient(135deg, #430205, #600000);
+  transform: scale(1.03);
+}
