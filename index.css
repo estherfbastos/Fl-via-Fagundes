@@ -1157,7 +1157,8 @@ html, body {
 .wrapper {
   overflow-x: hidden;
 }
-section {
+#video,
+#home {
   overflow: hidden;
 }
 
