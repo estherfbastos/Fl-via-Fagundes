@@ -2,18 +2,13 @@
 /* =========================
    🔘 BASE DO BOTÃO (GLOBAL)
 ========================= */
-* {
-  box-sizing: border-box;
-}
 
 a {
     text-decoration: none;
 }
 
 .button {
-   align-self: flex-start;
-    width: 100%;
-    max-width: 320px;
+    align-self: left;
     min-width: 220px;
 
     font-family: 'Paralucent-Medium', sans-serif;
@@ -111,9 +106,27 @@ a {
     gap: 1.5rem;
 }
   
-img, video {
-  max-width: 100%;
-  display: block;
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
 }
 
 @import url('https://fonts.cdnfonts.com/css/apple-garamond');
@@ -323,8 +336,7 @@ html {
 }
 
 #home .text {
-margin-top: 0;
-  padding-top: 6rem;
+  margin-top: 110%;
   text-align: center;
   position: relative;
   z-index: 4;
@@ -763,21 +775,12 @@ margin-top: 0;
 #sobre-invertido .image-invertido {
     min-height: 400px;
     background-image: url('./assets/eparavoce.jpg');
-    background-size: cover; /* 🔥 CORREÇÃO PRINCIPAL */
-    background-position: center;
+    background-size: 100%;
+    background-position: center 0%;
     background-repeat: no-repeat;
 
+    /* 👇 invertido */
     border-radius: 60px 0px 0px 60px;
-}
-
-@media (min-width: 1080px) {
-    #sobre-invertido .content {
-        align-items: stretch; /* 🔥 garante altura igual */
-    }
-
-    #sobre-invertido .image-invertido {
-        height: 100%;
-    }
 }
 
 /* TEXTO */
@@ -1010,8 +1013,7 @@ margin-top: 0;
     section#video video.desktop {
         display: inherit;
         position: absolute;
-        width: 100%;
-        max-width: 100%;
+        width: 120%;
         height: 100%;
         top: 0;
         left: 50%;
@@ -1150,44 +1152,24 @@ margin-top: 0;
   }
 }
 
-html, body {
-  overflow-x: hidden;
+/* =========================
+   💎 BOTÃO SERVIÇOS
+========================= */
+
+.btn-servico {
+  margin-top: 2rem;
+  max-width: 320px;
 }
 
-.wrapper {
-  overflow-x: hidden;
-}
-#video,
-#home {
-  overflow: hidden;
-}
-
-/* 🔥 CORREÇÃO GLOBAL DE OVERFLOW */
-* {
-  box-sizing: border-box;
+/* deixa mais elegante e menos "agressivo" */
+.btn-servico {
+  background: linear-gradient(135deg, #5E0006, #7a0a10);
+  color: #fff;
+  border: 1px solid #ffffff22;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
-/* evita vazamento por animações */
-section {
-  overflow: hidden;
-}
-
-/* garante que nada passe da tela */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* corrige elementos que extrapolam */
-#video video.desktop,
-#home .image img.desktop {
-  max-width: 100%;
-}
-
-body {
-  position: relative;
+/* hover refinado */
+.btn-servico:hover {
+  background: linear-gradient(135deg, #430205, #600000);
+  transform: scale(1.03);
 }
