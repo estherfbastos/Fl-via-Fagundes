@@ -873,76 +873,33 @@ html {
 }
 
 #video {
-    overflow: hidden;
-    position: relative;
-    color: #5E0006;
-
-    height: 80vh;
+  position: relative;
 }
 
 #video .before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #5E0006;
-    z-index: 1;
-}
-
-#video video.mobile {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 9/16;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-
-    filter: brightness(.6);
-}
-
-#video video.desktop {
-    display: none;
+  background: rgba(94, 0, 6, 0.7);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #video .wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
-#video header {
-    position: relative;
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#video .shape-divider {
+  position: relative;
+  z-index: 5;
 }
 
-#video header h2 {
-    color: #fff;
-    font-size: 2rem;
-}
-
-#video header h2 span {
-    font-family: 'Apple Garamond Light', sans-serif;
-    font-style: italic;
-    font-weight: 200;
-    color: var(--primary-color);
-    font-size: 3rem;
-    line-height: .5;
-}
-
-#video header a button {
-    margin-top: 2rem;
-    width: initial;
-    padding-inline: 4rem;
+#video h2,
+#video button {
+  color: white;
+  opacity: 1;
 }
 
 .custom-shape-divider-top-1742927720 {
@@ -989,34 +946,6 @@ html {
     fill: var(--bg-white);
 }
 
-#video {
-  min-height: 100vh;
-  position: relative;
-  z-index: 2;
-  opacity: 1 !important;
-  overflow: visible;
-}
-
-#video .aos-init {
-  opacity: 1 !important;
-}
-
-.wrapper {
-  position: relative;
-  z-index: 10;
-}
-
-/* Assuming shape dividers have classes like .shape-divider */
-.shape-divider,
-.divider-shape {
-  z-index: 1;
-}
-
-/* Ensure parent containers don't clip content */
-#video > * {
-  position: relative;
-  z-index: 3;
-}
 
 @media (min-width: 1080px) {
     section#video {
