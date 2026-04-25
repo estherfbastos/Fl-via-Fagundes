@@ -7,6 +7,17 @@ a {
     text-decoration: none;
 }
 
+* { 
+   margin: 0; 
+   padding: 0; 
+   box-sizing: border-box; 
+}
+
+body, html { 
+   width: 100%; 
+   overflow-x: hidden; 
+}
+
 .button {
     align-self: left;
     min-width: 220px;
