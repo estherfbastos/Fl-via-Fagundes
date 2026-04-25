@@ -989,6 +989,35 @@ html {
     fill: var(--bg-white);
 }
 
+#video {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  opacity: 1 !important;
+  overflow: visible;
+}
+
+#video .aos-init {
+  opacity: 1 !important;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+/* Assuming shape dividers have classes like .shape-divider */
+.shape-divider,
+.divider-shape {
+  z-index: 1;
+}
+
+/* Ensure parent containers don't clip content */
+#video > * {
+  position: relative;
+  z-index: 3;
+}
+
 @media (min-width: 1080px) {
     section#video {
         height: 80vh;
