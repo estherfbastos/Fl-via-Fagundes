@@ -756,6 +756,8 @@ html {
 
 #sobre-invertido {
     position: relative;
+    margin-bottom: 0;
+    padding-bottom: 50px;
 }
 
 /* GRID */
@@ -1059,6 +1061,8 @@ html {
 
 #servicos {
   background: var(--bg-white);
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 #servicos header {
@@ -1151,5 +1155,16 @@ html {
 
   .servico-text {
     padding: 4rem;
+  }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  #sobre-invertido {
+    padding-bottom: 30px;
+  }
+  
+  #servicos {
+    padding-top: 30px;
   }
 }
