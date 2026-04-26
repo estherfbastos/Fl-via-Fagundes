@@ -199,3 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-out-cubic',
+    offset: 80
+  });
+</script>
