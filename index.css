@@ -1022,6 +1022,34 @@ button {
     position: absolute !important;
     z-index: -2 !important;
 }
+
+/* CORREÇÃO: garantir que o texto fique acima do vídeo e dos divisores */
+#video .wrapper {
+  position: relative;
+  z-index: 20;
+}
+
+#video header {
+  position: relative;
+  z-index: 30;
+}
+
+/* Manter o vídeo sempre no fundo */
+#video video.mobile,
+#video video.desktop {
+  z-index: 0 !important;
+}
+
+/* Divisores de topo e fundo ainda mais atrás */
+.custom-shape-divider-top-1742927720,
+.custom-shape-divider-bottom-1743079326 {
+  z-index: -5 !important;
+}
+
+/* Remover o before caso atrapalhe */
+#video .before {
+  display: none !important;
+}
 /* ==========================================================================
    FOOTER
    ========================================================================== */
