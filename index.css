@@ -1002,95 +1002,209 @@ button {
 }
 
 /* ==========================================================================
-   SERVIÇOS
+   SERVIÇOS - PREMIUM
    ========================================================================== */
 
 #servicos {
-  background: var(--bg-white);
+  background: #ffffff;
+  padding: 8rem 2rem;
 }
 
+/* HEADER */
 #servicos header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 #servicos h2 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #5E0006;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 #servicos header p {
   font-size: 1.5rem;
-  color: #6e5c55;
+  color: #7a6a63;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
+/* BLOCO SERVIÇO */
 .servico {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
 }
 
+/* IMAGEM */
 .servico-image {
   width: 100%;
-  min-height: 350px;
+  min-height: 360px;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 22px;
+  transition: transform 0.6s ease;
 }
 
+.servico-image:hover {
+  transform: scale(1.02);
+}
+
+/* TEXTO */
 .servico-text {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* TAG */
+.tag-servico {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a67c6d;
+  margin-bottom: 1rem;
+}
+
+/* TÍTULO */
 .servico-text h3 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   color: #5E0006;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
-.etapa {
-  margin-bottom: 2rem;
+/* INTRO */
+.servico-intro {
+  font-size: 1.5rem;
+  color: #5a4a44;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
 }
 
-.etapa h4 {
-  font-size: 1.6rem;
+/* GRID ETAPAS */
+.etapas-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* CARD */
+.etapa-card {
+  background: #faf7f5;
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* HOVER PREMIUM */
+.etapa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* TÍTULO CARD */
+.etapa-card h4 {
+  font-size: 1.35rem;
   color: #5E0006;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
 }
 
-.etapa ul {
-  padding-left: 1rem;
+/* TEXTO CARD */
+.etapa-card p {
+  font-size: 1.3rem;
+  color: #6b5b55;
+  line-height: 1.5;
 }
 
-.etapa li {
+/* RESULTADO */
+.servico-resultado {
   font-size: 1.4rem;
-  color: #453933;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
-  opacity: 0.85;
+  font-weight: 500;
+  color: #5E0006;
+  margin-bottom: 2rem;
 }
 
+/* BOTÃO */
+.btn-servico {
+  align-self: flex-start;
+  padding: 1.2rem 2.4rem;
+  border-radius: 999px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background: #5E0006;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-servico:hover {
+  background: #3d0004;
+  transform: translateY(-2px);
+}
+
+/* DESKTOP */
 @media (min-width: 1080px) {
+
   .servico {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 5rem;
   }
+
   .servico.invertido {
     direction: rtl;
   }
+
   .servico.invertido .servico-text {
     direction: ltr;
   }
+
   .servico-image {
-    height: 100%;
     min-height: 500px;
   }
+
   .servico-text {
-    padding: 4rem;
+    padding: 2rem 0;
   }
+
+  .etapas-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servico-text h3 {
+    font-size: 3rem;
+  }
+
+  .servico-intro {
+    font-size: 1.6rem;
+  }
+}
+
+/* MOBILE REFINADO */
+@media (max-width: 600px) {
+
+  #servicos {
+    padding: 6rem 1.5rem;
+  }
+
+  .servico-text h3 {
+    font-size: 2.2rem;
+  }
+
+  .servico-intro {
+    font-size: 1.4rem;
+  }
+
+  .etapa-card {
+    padding: 1.5rem;
+  }
+
 }
 /* ==========================================================================
    FOOTER
