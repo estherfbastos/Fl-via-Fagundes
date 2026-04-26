@@ -888,6 +888,119 @@ button {
 #metodo .lista p {
   transition-duration: 1.2s;
 }
+
+/* ==========================================================================
+   FORMAS DE ATENDIMENTO
+   ========================================================================== */
+
+#formas {
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#formas .wrapper {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* TÍTULO */
+#formas header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#formas h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #630207;
+  letter-spacing: -0.5px;
+}
+
+/* GRID */
+#formas .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* CARDS */
+#formas .card {
+  background: #5E0006;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  color: #f6eeea;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+}
+
+/* HOVER SUAVE (luxo discreto) */
+#formas .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* DESTAQUE (empresas) */
+#formas .card.destaque {
+  background: linear-gradient(145deg, #5E0006, #2a0003);
+}
+
+/* TÍTULOS */
+#formas .card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #ffffffb3;
+}
+
+#formas .card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* TEXTO */
+#formas .card p {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #f3e5e0;
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+  #formas .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #formas .card.destaque {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1080px) {
+  #formas {
+    padding: 10rem 4rem;
+  }
+
+  #formas h2 {
+    font-size: 4rem;
+  }
+
+  #formas .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #formas .card.destaque {
+    grid-column: span 1;
+  }
+}
+
 /* ==========================================================================
    SERVIÇOS
    ========================================================================== */
