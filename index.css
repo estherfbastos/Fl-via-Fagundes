@@ -1,4 +1,6 @@
-/* Código Otimizado */
+/* Código Otimizado e Seguro */
+
+/* GLOBAIS */
 @import url('https://fonts.cdnfonts.com/css/apple-garamond');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap');
 
@@ -12,6 +14,7 @@
 :root {
     --color-text: #fff4dd;
     --primary-color: #D3BEB9;
+    --secondy-color: #D3BEB9;
     --orange-black: #170E00;
     --gradient: linear-gradient(45deg, #D3BEB9 0%, #D3BEB9 100%);
     --bg-black: #0b0b0b;
@@ -38,6 +41,7 @@ html, body {
 a { text-decoration: none; }
 ul { list-style: none; }
 img, video { max-width: 100%; display: block; }
+button { cursor: url(""), auto; }
 
 .wrapper {
     width: min(50rem, 100%);
@@ -45,19 +49,16 @@ img, video { max-width: 100%; display: block; }
     padding-inline: 2.4rem;
 }
 
-section { padding-block: 7rem; }
-
-/* Media Queries Wrapper */
+@media (min-width: 1080px) { .wrapper { width: min(110rem, 100%); } }
 @media (min-width: 1200px) { .wrapper { width: min(120rem, 100%); } }
 @media (min-width: 1600px) { 
     .wrapper { width: min(130rem, 100%); }
     :root { font-size: 65%; }
 }
-@media (min-width: 1700px) { .wrapper { width: min(140rem, 100%); } }
 
-/* =========================
-   BOTÕES
-   ========================= */
+section { padding-block: 7rem; }
+
+/* BOTÕES */
 .button {
     min-width: 220px;
     font-family: 'Paralucent-Medium', sans-serif;
@@ -111,12 +112,9 @@ section { padding-block: 7rem; }
 }
 .btn-sobre:hover { background: #600000; }
 
-/* =========================
-   UTILIDADES
-   ========================= */
+/* UTILIDADES */
 ::-webkit-scrollbar { width: .6rem; background-color: #0f0f0f; }
 ::-webkit-scrollbar-thumb { background: var(--gradient); border-radius: 1rem; }
-
 ::selection { color: #000; background: #d8d8d8; }
 
 .no-scroll { overflow: hidden; position: fixed; width: 100%; }
@@ -132,6 +130,7 @@ section { padding-block: 7rem; }
 .reveal.active { opacity: 1; transform: translate(0) scale(1); filter: blur(0); }
 
 #contagem { position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); }
+@media (min-width: 1080px) { #contagem { left: 70%; transform: translate(-50%, -50%); } }
 
 #buttonWhatsapp {
     position: fixed;
@@ -147,51 +146,7 @@ section { padding-block: 7rem; }
 #buttonWhatsapp img { width: 6rem; transition: 0.3s; }
 #buttonWhatsapp img:hover { transform: scale(1.1); }
 
-/* Consolidated @media (min-width: 1080px) */
-@media (min-width: 1080px) {
-  .wrapper { width: min(110rem, 100%); }
-  #contagem { left: 70%; transform: translate(-50%, -50%); }
-
-  /* Home */
-  #home { height: 95vh; justify-content: center; }
-  #home::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, #6b5950 0%, #8e7e76 40%, transparent 70%); z-index: 1; }
-  #home .image img.mobile { display: none; }
-  #home .image img.desktop { 
-    display: block; position: absolute; top: -180px; right: 0; height: 130%; 
-    mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
-  }
-  #home .content { display: grid; grid-template-columns: 1.5fr 1fr; }
-  #home .text { margin: 0; text-align: left; align-items: start; }
-  #home img.logo { display: block; width: 30rem; position: absolute; bottom: 96%; left: -3%; }
-  #home h1 { font-size: 7rem; background: #5E0006; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  #home h1 span { font-size: 8rem; background: #fff; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  #home p { font-size: 2.2rem; color: #ffffffdc; width: initial; }
-  .custom-shape-divider-bottom-1736960517 svg { height: 40px; }
-
-  /* Sobre */
-  #sobre .content, #sobre-invertido .content { grid-template-columns: 1fr 1fr; min-height: 600px; }
-  #sobre .text, #sobre-invertido .text-invertido { padding: 6rem; display: flex; flex-direction: column; justify-content: center; text-align: left; align-items: start; }
-  #sobre h2, #sobre-invertido h2 { font-size: 3rem; }
-  #sobre p, #sobre-invertido p { font-size: 1.6rem; }
-
-  /* Serviços */
-  .servico { grid-template-columns: 1fr 1fr; align-items: center; }
-  .servico.invertido { direction: rtl; }
-  .servico.invertido .servico-text { direction: ltr; }
-  .servico-image { min-height: 500px; }
-  .servico-text { padding: 4rem; }
-
-  /* Vídeo */
-  #video h2 { font-size: 3rem; }
-  #video h2 span { font-size: 4rem; }
-  #video video.mobile { display: none; }
-  #video video.desktop { display: block; width: 120%; left: 50%; transform: translate(-50%, 0); }
-  .custom-shape-divider-top-1742927720 svg, .custom-shape-divider-bottom-1743079326 svg { height: 40px; }
-}
-
-/* =========================
-   HOME
-   ========================= */
+/* HOME */
 #home {
   background: var(--bg-black);
   height: 94vh;
@@ -222,9 +177,24 @@ section { padding-block: 7rem; }
 .custom-shape-divider-bottom-1736960517 { position: absolute; bottom: 0; width: 100%; z-index: 1; line-height: 0; }
 .custom-shape-divider-bottom-1736960517 svg { height: 30px; fill: var(--bg-white); }
 
-/* =========================
-   TOPICOS PREMIUM
-   ========================= */
+@media (min-width: 1080px) {
+  #home { height: 95vh; justify-content: center; }
+  #home::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, #6b5950 0%, #8e7e76 40%, transparent 70%); z-index: 1; }
+  #home .image img.mobile { display: none; }
+  #home .image img.desktop { 
+    display: block; position: absolute; top: -180px; right: 0; height: 130%; 
+    mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); 
+  }
+  #home .content { display: grid; grid-template-columns: 1.5fr 1fr; }
+  #home .text { margin: 0; text-align: left; align-items: start; }
+  #home img.logo { display: block; width: 30rem; position: absolute; bottom: 96%; left: -3%; }
+  #home h1 { font-size: 7rem; background: #5E0006; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  #home h1 span { font-size: 8rem; background: #fff; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  #home p { font-size: 2.2rem; color: #ffffffdc; width: initial; }
+  .custom-shape-divider-bottom-1736960517 svg { height: 40px; }
+}
+
+/* TOPICOS PREMIUM */
 .topicos-premium { padding: 4rem 2rem; color: #fff; }
 .topicos-premium .container { display: flex; flex-direction: column; gap: 2rem; max-width: 900px; margin: 0 auto; }
 .topicos-premium .bloco { background: #5E0006; padding: 2rem; border-radius: 16px; transition: 0.4s; backdrop-filter: blur(10px); }
@@ -233,9 +203,7 @@ section { padding-block: 7rem; }
 .topicos-premium li { font-size: 1.5rem; line-height: 1.6; margin-bottom: 0.7rem; opacity: 0.85; }
 .topicos-premium li::before { content: "•"; margin-right: 8px; }
 
-/* =========================
-   SOBRE
-   ========================= */
+/* SOBRE */
 #sobre .content, #sobre-invertido .content { display: grid; grid-template-columns: 1fr; }
 #sobre .image { min-height: 400px; background: url('./assets/sobreFlavia.jpeg') center 45% / cover no-repeat; border-radius: 0 40px 40px 0; }
 #sobre .text { padding: 4rem 2rem; }
@@ -245,14 +213,19 @@ section { padding-block: 7rem; }
 #sobre-invertido .image-invertido { min-height: 400px; background: url('./assets/eparavoce.jpg') center / cover no-repeat; border-radius: 60px 0 0 60px; }
 #sobre-invertido .text-invertido { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
 
+@media (min-width: 1080px) {
+    #sobre .content, #sobre-invertido .content { grid-template-columns: 1fr 1fr; min-height: 600px; }
+    #sobre .text, #sobre-invertido .text-invertido { padding: 6rem; display: flex; flex-direction: column; justify-content: center; text-align: left; align-items: start; }
+    #sobre h2, #sobre-invertido h2 { font-size: 3rem; }
+    #sobre p, #sobre-invertido p { font-size: 1.6rem; }
+}
+
 @media (max-width: 768px) {
     #sobre-invertido .content { gap: 3rem; }
     #sobre .image, #sobre-invertido .image-invertido { aspect-ratio: 4 / 5; min-height: unset; }
 }
 
-/* =========================
-   SERVIÇOS
-   ========================= */
+/* SERVIÇOS */
 #servicos header { text-align: center; margin-bottom: 5rem; }
 #servicos h2 { font-size: 3rem; color: #5E0006; }
 #servicos header p { font-size: 1.5rem; color: #6e5c55; }
@@ -265,9 +238,15 @@ section { padding-block: 7rem; }
 .etapa h4 { font-size: 1.6rem; color: #5E0006; font-weight: 600; }
 .etapa li { font-size: 1.4rem; color: #453933; line-height: 1.6; opacity: 0.85; }
 
-/* =========================
-   VÍDEO
-   ========================= */
+@media (min-width: 1080px) {
+  .servico { grid-template-columns: 1fr 1fr; align-items: center; }
+  .servico.invertido { direction: rtl; }
+  .servico.invertido .servico-text { direction: ltr; }
+  .servico-image { min-height: 500px; }
+  .servico-text { padding: 4rem; }
+}
+
+/* VÍDEO */
 #video { position: relative; height: 80vh; overflow: hidden; }
 #video video { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; filter: brightness(.6); }
 #video video.desktop { display: none; }
@@ -280,8 +259,14 @@ section { padding-block: 7rem; }
 .custom-shape-divider-bottom-1743079326 { bottom: 0; }
 .custom-shape-divider-top-1742927720 svg, .custom-shape-divider-bottom-1743079326 svg { height: 30px; fill: var(--bg-white); }
 
-/* =========================
-   FOOTER
-   ========================= */
+@media (min-width: 1080px) {
+    #video h2 { font-size: 3rem; }
+    #video h2 span { font-size: 4rem; }
+    #video video.mobile { display: none; }
+    #video video.desktop { display: block; width: 120%; left: 50%; transform: translate(-50%, 0); }
+    .custom-shape-divider-top-1742927720 svg, .custom-shape-divider-bottom-1743079326 svg { height: 40px; }
+}
+
+/* FOOTER */
 .footer { padding: 2rem 0; border-top: 1px solid #6b5b55; }
 .footer p { font-size: 1.3rem; color: #6b5b55; text-align: center; font-family: 'Montserrat', sans-serif; }
