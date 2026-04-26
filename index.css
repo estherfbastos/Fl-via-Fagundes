@@ -857,8 +857,8 @@ button {
     height: 100%;
     top: 0;
     left: 0;
-    background: #5E0006;
-    z-index: 1;
+    background: transparent;
+    z-index: -1;
 }
 
 #video video.mobile {
@@ -1006,6 +1006,15 @@ button {
     .custom-shape-divider-bottom-1743079326 svg {
         height: 40px;
     }
+}
+
+#video .before {
+    display: none;
+}
+
+.custom-shape-divider-top-1742927720,
+.custom-shape-divider-bottom-1743079326 {
+    z-index: 0;
 }
 
 /* ==========================================================================
