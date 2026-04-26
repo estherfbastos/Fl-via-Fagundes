@@ -846,6 +846,7 @@ button {
     overflow: hidden;
     position: relative;
     color: #5E0006;
+   background: #5E0006;
 
     height: 80vh;
 }
