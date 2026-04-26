@@ -745,7 +745,110 @@ button {
         min-height: unset;
     }
 }
+/* ==========================================================================
+   Ser para vestir
+   ========================================================================== */
+#metodo {
+  background: var(--bg-white);
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+#metodo .wrapper {
+  max-width: 900px;
+  width: 100%;
+}
+
+#metodo .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#metodo .text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* TÍTULO */
+#metodo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #630207;
+  letter-spacing: -0.5px;
+}
+
+#metodo h2 span {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #430205;
+}
+
+/* INTRO */
+#metodo .intro {
+  font-family: 'Lora', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #430205;
+}
+
+/* TEXTO */
+#metodo p {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  color: #5a4a42;
+  line-height: 1.6;
+}
+
+/* LISTA */
+#metodo .lista {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#metodo .lista p {
+  font-size: 1.45rem;
+  color: #3a2f2a;
+  letter-spacing: 0.2px;
+}
+
+/* FINAL */
+#metodo .final {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: #430205;
+}
+
+/* RESPONSIVO */
+@media (min-width: 1080px) {
+  #metodo {
+    padding: 10rem 4rem;
+  }
+
+  #metodo h2 {
+    font-size: 4rem;
+  }
+
+  #metodo .intro {
+    font-size: 2rem;
+  }
+
+  #metodo p {
+    font-size: 1.7rem;
+  }
+
+  #metodo .lista p {
+    font-size: 1.6rem;
+  }
+}
 /* ==========================================================================
    SERVIÇOS
    ========================================================================== */
