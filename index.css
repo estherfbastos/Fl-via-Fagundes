@@ -1012,15 +1012,9 @@ button {
     display: none;
 }
 
-#video .wrapper {
-    position: relative;
-    z-index: 10;
-}
-
 .custom-shape-divider-top-1742927720,
 .custom-shape-divider-bottom-1743079326 {
-    position: absolute !important;
-    z-index: -2 !important;
+    z-index: 0;
 }
 
 /* CORREÇÃO: garantir que o texto fique acima do vídeo e dos divisores */
