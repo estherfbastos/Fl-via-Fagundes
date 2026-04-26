@@ -846,6 +846,7 @@ button {
     overflow: hidden;
     position: relative;
     color: #5E0006;
+
     height: 80vh;
 }
 
@@ -868,6 +869,7 @@ button {
     top: 0;
     left: 0;
     z-index: 0;
+
     filter: brightness(.6);
 }
 
@@ -886,6 +888,7 @@ button {
 #video header {
     position: relative;
     z-index: 3;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -960,6 +963,7 @@ button {
     section#video {
         height: 80vh;
     }
+
     section#video header {
         display: flex;
         flex-direction: column;
@@ -967,15 +971,19 @@ button {
         justify-content: center;
         width: 70%;
     }
+
     section#video header h2 {
         font-size: 3rem;
     }
+
     section#video header h2 span {
         font-size: 4rem;
     }
+
     section#video video.mobile {
         display: none;
     }
+
     section#video video.desktop {
         display: inherit;
         position: absolute;
@@ -986,11 +994,14 @@ button {
         transform: translate(-50%, 0);
         object-fit: cover;
         z-index: 0;
+
         filter: brightness(.6);
     }
+
     .custom-shape-divider-top-1742927720 svg {
         height: 40px;
     }
+
     .custom-shape-divider-bottom-1743079326 svg {
         height: 40px;
     }
