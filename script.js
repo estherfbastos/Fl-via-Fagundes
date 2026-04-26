@@ -42,7 +42,7 @@ function showDetalhes(servicoId) {
 
     const imgSrc = card.querySelector('img').src;
     const titulo = card.querySelector('h3').textContent;
-    const descricao = card.querySelector('.card-description').textContent;
+    const descricao = card.querySelector('.card-deion').textContent;
     const whatsappUrl = card.dataset.whatsapp;
 
     document.getElementById('img-detalhe').src = imgSrc;
@@ -197,13 +197,3 @@ document.addEventListener('DOMContentLoaded', () => {
     setupListeners();
     setupResizeListener();
 });
-
-
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-    easing: 'ease-out-cubic',
-    offset: 80
-  });
-</script>
