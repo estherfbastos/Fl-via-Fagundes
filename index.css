@@ -749,24 +749,23 @@ button {
    Ser para vestir
    ========================================================================== */
 #metodo {
-  background: var(--bg-white);
+  background: transparent;
   padding: 8rem 2rem;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
+/* BLOCO PRINCIPAL */
 #metodo .wrapper {
   max-width: 900px;
   width: 100%;
+  background: #5E0006; /* vermelho fechado sofisticado */
+  border-radius: 24px;
+  padding: 4rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-#metodo .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* TEXTO */
 #metodo .text {
   text-align: center;
   display: flex;
@@ -779,15 +778,16 @@ button {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 600;
-  color: #630207;
   letter-spacing: -0.5px;
+
+  color: #f6eeea; /* claro elegante */
 }
 
 #metodo h2 span {
   font-family: 'Lora', serif;
   font-style: italic;
   font-weight: 400;
-  color: #430205;
+  color: #ffffff;
 }
 
 /* INTRO */
@@ -795,14 +795,14 @@ button {
   font-family: 'Lora', serif;
   font-size: 1.8rem;
   font-style: italic;
-  color: #430205;
+  color: #f3e5e0;
 }
 
-/* TEXTO */
+/* PARÁGRAFOS */
 #metodo p {
   font-family: 'Lora', serif;
   font-size: 1.5rem;
-  color: #5a4a42;
+  color: #f6eeea;
   line-height: 1.6;
 }
 
@@ -816,7 +816,7 @@ button {
 
 #metodo .lista p {
   font-size: 1.45rem;
-  color: #3a2f2a;
+  color: #ffffffd9;
   letter-spacing: 0.2px;
 }
 
@@ -824,13 +824,18 @@ button {
 #metodo .final {
   margin-top: 1.5rem;
   font-weight: 500;
-  color: #430205;
+  color: #ffffff;
 }
 
 /* RESPONSIVO */
 @media (min-width: 1080px) {
   #metodo {
     padding: 10rem 4rem;
+  }
+
+  #metodo .wrapper {
+    padding: 6rem 5rem;
+    border-radius: 32px;
   }
 
   #metodo h2 {
@@ -848,6 +853,26 @@ button {
   #metodo .lista p {
     font-size: 1.6rem;
   }
+}
+
+/* SUAVIZAÇÃO GLOBAL DO AOS */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); /* mais elegante */
+}
+
+/* QUANDO ATIVO */
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MICRO DETALHE: lista ainda mais suave */
+#metodo .lista p {
+  transition-duration: 1.2s;
 }
 /* ==========================================================================
    SERVIÇOS
