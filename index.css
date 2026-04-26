@@ -855,20 +855,34 @@ button {
   }
 }
 
-/* SUAVIZAÇÃO GLOBAL DO AOS */
-[data-aos] {
+/* BASE DO REVEAL */
+.reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition-property: opacity, transform;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); /* mais elegante */
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* QUANDO ATIVO */
-[data-aos].aos-animate {
+/* ATIVA */
+.reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* VARIAÇÕES */
+.reveal-up {
+  transform: translateY(40px);
+}
+
+/* DELAYS (efeito cascata elegante) */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+.delay-9 { transition-delay: 0.9s; }
 
 /* MICRO DETALHE: lista ainda mais suave */
 #metodo .lista p {
