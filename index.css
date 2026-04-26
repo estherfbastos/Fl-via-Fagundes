@@ -121,9 +121,9 @@ section {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ffffff4d;
-    background: var(--gradient);
-    color: #5E0006;
+    background: linear-gradient(135deg, #8b0000, #8b0000);
+    color: #fff;
+    border: 2px solid #ffffff33;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
 }
