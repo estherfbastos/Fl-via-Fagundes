@@ -842,7 +842,7 @@ button {
    VÍDEO
    ========================================================================== */
 
-#video {
+/*#video {
     overflow: hidden;
     position: relative;
     color: #fff4dd;
@@ -1015,7 +1015,7 @@ button {
 .custom-shape-divider-top-1742927720,
 .custom-shape-divider-bottom-1743079326 {
     z-index: 0;
-}
+} */
 
 /* ==========================================================================
    FOOTER
