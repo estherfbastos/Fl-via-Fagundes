@@ -16,13 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./index.css">
 </head>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<script>
-  AOS.init();
-</script>
-<body class="smooth-scroll-wrapper" class="antialiased">
+<body class="smooth-scroll-wrapper antialiased">
     <!-- 1. HEADER -->
     <header class="header" id="home">
         <div class="wrapper">
@@ -466,26 +460,17 @@
    
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // AOS
-            AOS.init({
-                duration: 1200,
-            });
-            // Reveal scroll
-            const reveals = document.querySelectorAll('.reveal');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-            reveals.forEach(el => observer.observe(el));
-        });
-    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic',
+      offset: 80
+    });
+  });
+</script>
     <script>
         const reveals = document.querySelectorAll('.reveal');
         function revealOnScroll() {
