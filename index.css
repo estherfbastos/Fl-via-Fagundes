@@ -1,10 +1,27 @@
-/* From Uiverse.io by adeladel522 */ 
-/* =========================
-   🔘 BASE DO BOTÃO (GLOBAL)
-========================= */
+/* ==========================================================================
+   GLOB AIS
+   ========================================================================== */
 
-a {
-    text-decoration: none;
+@import url('https://fonts.cdnfonts.com/css/apple-garamond');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'BrotherBold';
+  src: url('../font/brother-1816-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+    --color-text: #fff4dd;
+    --primary-color: #D3BEB9;
+    --secondy-color: #D3BEB9;
+    --orange-black: #170E00;
+    --gradient: linear-gradient(45deg, #D3BEB9 0%, #D3BEB9 100%);
+    --bg-black: #0b0b0b;
+    --bg-white: #f4f2ee;
+    --nav-height: 7.2rem;
+    --brother: 'BrotherBold', sans-serif;
 }
 
 * { 
@@ -18,39 +35,98 @@ body, html {
    overflow-x: hidden; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body {
+    background: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+
+@media (min-width: 1080px) {
+    .wrapper {
+      width: min(110rem, 100%);
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+      width: min(120rem, 100%);
+    }
+}
+
+@media (min-width: 1600px) {
+    .wrapper {
+      width: min(130rem, 100%);
+    }
+    :root {
+      font-size: 65%;
+    }
+}
+
+@media (min-width: 1700px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+}
+
+section {
+    padding-block: 7rem;
+}
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+
 .button {
     align-self: left;
     min-width: 220px;
-
     font-family: 'Paralucent-Medium', sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2;
-
     padding: 1.6rem 2.4rem;
     border-radius: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     position: relative;
     cursor: pointer;
     overflow: hidden;
-
     transition: all 0.3s ease-in-out;
-
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border: 2px solid #ffffff4d;
-
     background: var(--gradient);
     color: #5E0006;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
-
-/* =========================
-   ✨ SHINE EFFECT (GLOBAL)
-========================= */
 
 .button::before {
     content: "";
@@ -59,14 +135,12 @@ body, html {
     height: 100%;
     top: 0;
     left: -100px;
-
     background-image: linear-gradient(
         120deg,
         rgba(255,255,255,0) 30%,
         rgba(255,255,255,0.8),
         rgba(255,255,255,0) 70%
     );
-
     opacity: 0.6;
     animation: shine 2s ease-out infinite;
 }
@@ -77,10 +151,6 @@ body, html {
     100% { left: 100%; }
 }
 
-/* =========================
-   ⚡ HOVER GLOBAL
-========================= */
-
 .button:hover {
     transform: scale(1.05);
     border-color: #fff9;
@@ -90,9 +160,12 @@ body, html {
     transform: translate(4px);
 }
 
-/* =========================
-   🎯 VARIAÇÃO: SOBRE (PRIMARY DARK)
-========================= */
+@media (hover: none) {
+    .button:hover {
+        transform: none;
+        border-color: initial;
+    }
+}
 
 .btn-sobre {
     background: linear-gradient(135deg, #8b0000, #8b0000);
@@ -100,165 +173,44 @@ body, html {
     border: 2px solid #ffffff33;
 }
 
-/* hover variante */
 .btn-sobre:hover {
     background: linear-gradient(135deg, #600000, #600000);
 }
 
-/* =========================
-   📌 CENTRALIZAÇÃO (APENAS SOBRE INVERTIDO)
-========================= */
-
-#sobre-invertido .text-invertido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-}
-  
-img, video {
-  max-width: 100%;
-  display: block;
-}
-
-@import url('https://fonts.cdnfonts.com/css/apple-garamond');
-
-@font-face {
-  font-family: 'BrotherBold';
-  src: url('../font/brother-1816-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-:root {
-
-    --color-text: #fff4dd;
-    --primary-color: #D3BEB9;
-    --secondy-color: #D3BEB9;
-    --orange-black: #170E00;
-    --gradient: linear-gradient(45deg, #D3BEB9 0%, #D3BEB9 100%);
-    --bg-black: #0b0b0b;
-    --bg-white: #f4f2ee;
-
-    --nav-height: 7.2rem;
-
-    --brother: 'BrotherBold', sans-serif;
-}  
-
-html {
-    scroll-behavior: smooth;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-
-  }
-
-  #contagem {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  @media (min-width: 1080px) {
-    #contagem {
-      left: 70%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  body {
-    background:var(--bg-white);
-  }
-
-  .no-scroll {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-  }
-
-
-  /* .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background: #8100e4be;
-  }
-
-  .cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #8100e4be;
-  }
-
-  .cursor-dot,
-  .cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 150;
-    pointer-events: none;
-  } */
-
-  button {
+button {
     cursor: url(""), auto;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  ::selection {
-  color: #000000;
-  background: #d8d8d8;
 }
 
-  .wrapper {
-    width: min(50rem, 100%);
-    margin-inline: auto;
-  
-    padding-inline: 2.4rem;
-  }
+#buttonWhatsapp {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: all 300ms ease-in-out;
+}
 
-  @media (min-width: 1080px) {
-    .wrapper {
-      width: min(110rem, 100%);
-    }
-  }
+#buttonWhatsapp.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
-  @media (min-width: 1200px) {
-    .wrapper {
-      width: min(120rem, 100%);
-    }
-  }
+#buttonWhatsapp img {
+    width: 6rem;
+    transition: all 300ms ease-in-out;
+}
 
-  @media (min-width: 1600px) {
-    .wrapper {
-      width: min(130rem, 100%);
-    }
+#buttonWhatsapp svg:hover {
+    transform: scale(1.1);
+}
 
-    :root {
-      font-size: 65%;
-    }
-  }
+/* ==========================================================================
+   UTILIDADES
+   ========================================================================== */
 
-  @media (min-width: 1700px) {
-    .wrapper {
-      width: min(140rem, 100%);
-    }
-  }
-  
-  section {
-    padding-block: 7rem;
-  }
-
-  /*====  scrollbar ============================ */
 ::-webkit-scrollbar {
   width: .6rem;
   background-color: #0f0f0f;
@@ -270,37 +222,58 @@ html {
   border-radius: 1rem;
 }
 
-  /* buttonWhatsapp =================== */
-#buttonWhatsapp {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 100;
-  
-    opacity: 0;
-    visibility: hidden;
-  
-    transform: translateY(100%);
-    transition: all 300ms ease-in-out;
-  }
-  
-  #buttonWhatsapp.show {
-    opacity: 1;
-    visibility: visible;
-  
-    transform: translateY(0);
-  }
-  
-  #buttonWhatsapp img {
-    width: 6rem;
-    transition: all 300ms ease-in-out;
-  }
-  
-  #buttonWhatsapp svg:hover {
-    transform: scale(1.1);
-  }
+::selection {
+  color: #000000;
+  background: #d8d8d8;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Montserrat:wght@400;500;600&display=swap');
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+    filter: blur(6px);
+    transition: 
+        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left {
+    transform: translateX(-80px) scale(0.98);
+}
+
+.reveal-right {
+    transform: translateX(80px) scale(0.98);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+    filter: blur(0);
+}
+
+#contagem {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media (min-width: 1080px) {
+    #contagem {
+      left: 70%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+/* ==========================================================================
+   HOME
+   ========================================================================== */
 
 #home {
   background: var(--bg-black);
@@ -358,6 +331,7 @@ html {
 #home h1 span {
   font-family: 'Lora', serif;
   font-style: italic;
+
   font-weight: 400;
   font-size: 2.8rem;
   color: #430205;
@@ -403,7 +377,6 @@ html {
   background: #f6eeea;
 }
 
-/* ===== IMAGEM - MOBILE E DESKTOP ===== */
 #home .image {
   position: absolute;
   top: 0;
@@ -414,7 +387,6 @@ html {
   z-index: 0;
 }
 
-/* MOBILE - Preenche tudo */
 #home .image img.mobile {
   display: block;
   position: absolute;
@@ -426,7 +398,6 @@ html {
   object-position: center;
 }
 
-/* DESKTOP - Escondida no mobile */
 #home .image img.desktop {
   display: none;
 }
@@ -462,7 +433,6 @@ html {
   fill: var(--bg-white);
 }
 
-/* ===== DESKTOP - 1080px+ ===== */
 @media (min-width: 1080px) {
   header#home {
     justify-content: center;
@@ -470,11 +440,9 @@ html {
     height: 95vh;
     max-height: 95vh;
   }
-
   .custom-shape-divider-bottom-1736960517 svg {
     height: 40px;
   }
-
   header#home::after {
     content: "";
     position: absolute;
@@ -484,8 +452,6 @@ html {
     z-index: 2;
     display: none;
   }
-
-  /* Degradê se misturando com a imagem */
   header#home::before {
     content: "";
     position: absolute;
@@ -494,12 +460,9 @@ html {
     background: linear-gradient(to right, #6b5950 0%, #8e7e76 40%, transparent 70%);
     z-index: 1;
   }
-
-  /* DESKTOP - Mostra a imagem desktop */
   #home .image img.mobile {
     display: none;
   }
-
   #home .image img.desktop {
     display: block;
     position: absolute;
@@ -509,19 +472,15 @@ html {
     width: auto;
     height: 130%;
     object-fit: contain;
-    
-    /* Máscara de degradê - desaparece para a esquerda */
     -webkit-mask-image: linear-gradient(to left, rgb(103, 85, 71) 0%, rgb(118, 97, 81) 50%, rgb(103, 85, 71) 100%);
     mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   }
-
   header#home .content {
     text-align: center;
     align-items: center;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
   }
-
   header#home .text {
     margin-top: initial;
     margin-bottom: initial;
@@ -533,7 +492,6 @@ html {
     position: relative;
     z-index: 2;
   }
-
   header#home .content img.logo {
     display: inherit;
     width: 30rem;
@@ -541,7 +499,6 @@ html {
     bottom: 96%;
     left: -3%;
   }
-
   header#home .content h1 {
     font-size: 7rem;
     line-height: 0.9;
@@ -550,40 +507,30 @@ html {
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
   }
-
   header#home .content h1 span {
     font-size: 8rem;
     background: linear-gradient(to bottom, #fff 60%, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   header#home .content a {
     width: initial;
   }
-
   header#home .content p {
     font-size: 2.2rem;
     font-weight: 200;
     color: #ffffffdc;
     width: initial;
   }
-
   header#home .content p span {
     color: #ffffffdc;
     font-weight: 600;
   }
-
   header#home .content a button {
     font-size: 1.8rem;
     margin-top: 3rem;
   }
 }
-
-@media (min-width: 1700px) {
-  /* Ajustes para telas muito grandes, se necessário */
-}
-
 
 .topicos-premium {
   padding: 4rem 2rem;
@@ -651,54 +598,19 @@ html {
   font-weight: 500;
 }
 
-/* animação reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ==========================================================================
+   SOBRE
+   ========================================================================== */
 
 #sobre {
     position: relative;
 }
 
-/* 🔥 GRID PRINCIPAL */
 #sobre .content {
     display: grid;
     grid-template-columns: 1fr;
 }
-.reveal {
-    opacity: 0;
-    transform: translateY(60px) scale(0.98);
-    filter: blur(6px);
-    transition: 
-        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-        filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
 
-/* variações */
-.reveal-left {
-    transform: translateX(-80px) scale(0.98);
-}
-
-.reveal-right {
-    transform: translateX(80px) scale(0.98);
-}
-
-/* estado final */
-.reveal.active {
-    opacity: 1;
-    transform: translateX(0) translateY(0) scale(1);
-    filter: blur(0);
-}
-
-/* 🔥 IMAGEM */
 #sobre .image {
     min-height: 400px;
     background-image: url('./assets/sobreFlavia.jpeg');
@@ -708,7 +620,6 @@ html {
     border-radius: 0px 40px 40px 0px;
 }
 
-/* 🔥 TEXTO */
 #sobre .text {
     padding: 4rem 2rem;
 }
@@ -726,29 +637,24 @@ html {
     margin-top: 1rem;
 }
 
-/* 🔥 DESKTOP */
 @media (min-width: 1080px) {
     #sobre .content {
         grid-template-columns: 1fr 1fr;
         min-height: 600px;
     }
-
     #sobre .image {
         height: 100%;
     }
-
     #sobre .text {
         padding: 6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     #sobre h2 {
         font-size: 3rem;
         color: #5E0006;
     }
-
     #sobre p {
         font-size: 1.6rem;
     }
@@ -758,36 +664,31 @@ html {
     position: relative;
 }
 
-/* GRID */
 #sobre-invertido .content {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 3rem;
 }
 
-/* IMAGEM */
 #sobre-invertido .image-invertido {
     min-height: 400px;
     background-image: url('./assets/eparavoce.jpg');
-    background-size: cover; /* 🔥 CORREÇÃO PRINCIPAL */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     border-radius: 60px 0px 0px 60px;
 }
 
-@media (min-width: 1080px) {
-    #sobre-invertido .content {
-        align-items: stretch; /* 🔥 garante altura igual */
-    }
-
-    #sobre-invertido .image-invertido {
-        height: 100%;
-    }
-}
-
-/* TEXTO */
 #sobre-invertido .text-invertido {
     padding:0;
+}
+
+#sobre-invertido .text-invertido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
 }
 
 #sobre-invertido h2 {
@@ -803,29 +704,25 @@ html {
     margin-top: 1rem;
 }
 
-/* DESKTOP */
 @media (min-width: 1080px) {
     #sobre-invertido .content {
         grid-template-columns: 1fr 1fr;
         min-height: 600px;
+        align-items: stretch;
     }
-
     #sobre-invertido .image-invertido {
         height: 100%;
     }
-
     #sobre-invertido .text-invertido {
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     #sobre-invertido h2 {
         font-size: 3rem;
         color: #5E0006;
     }
-
     #sobre-invertido p {
         font-size: 1.6rem;
     }
@@ -836,45 +733,119 @@ html {
         flex-direction: column;
         gap: 3rem;
     }
-
     #sobre-invertido .text-invertido {
         gap: 2rem;
     }
-
     #sobre-invertido .button {
         margin-top: 1.5rem;
     }
-}
-
-@media (hover: none) {
-    .button:hover {
-        transform: none;
-        border-color: initial;
+    #sobre .image,
+    #sobre-invertido .image-invertido {
+        aspect-ratio: 4 / 5;
+        min-height: unset;
     }
 }
 
-.button {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+/* ==========================================================================
+   SERVIÇOS
+   ========================================================================== */
+
+#servicos {
+  background: var(--bg-white);
 }
 
-#sobre-invertido .content {
-    gap: 3rem;
+#servicos header {
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
-@media (max-width: 768px) {
-    #sobre .image,
-    #sobre-invertido .image-invertido {
-    aspect-ratio: 4 / 5;
-    min-height: unset;
+#servicos h2 {
+  font-size: 3rem;
+  color: #5E0006;
+  margin-bottom: 1rem;
 }
+
+#servicos header p {
+  font-size: 1.5rem;
+  color: #6e5c55;
 }
+
+.servico {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.servico-image {
+  width: 100%;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.servico-text {
+  text-align: left;
+}
+
+.servico-text h3 {
+  font-size: 2.4rem;
+  color: #5E0006;
+  margin-bottom: 2rem;
+}
+
+.etapa {
+  margin-bottom: 2rem;
+}
+
+.etapa h4 {
+  font-size: 1.6rem;
+  color: #5E0006;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.etapa ul {
+  padding-left: 1rem;
+}
+
+.etapa li {
+  font-size: 1.4rem;
+  color: #453933;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
+@media (min-width: 1080px) {
+  .servico {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .servico.invertido {
+    direction: rtl;
+  }
+  .servico.invertido .servico-text {
+    direction: ltr;
+  }
+  .servico-image {
+    height: 100%;
+    min-height: 500px;
+  }
+  .servico-text {
+    padding: 4rem;
+  }
+}
+
+/* ==========================================================================
+   VÍDEO
+   ========================================================================== */
 
 #video {
     overflow: hidden;
     position: relative;
     color: #5E0006;
-
     height: 80vh;
 }
 
@@ -897,7 +868,6 @@ html {
     top: 0;
     left: 0;
     z-index: 0;
-
     filter: brightness(.6);
 }
 
@@ -916,7 +886,6 @@ html {
 #video header {
     position: relative;
     z-index: 3;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -991,7 +960,6 @@ html {
     section#video {
         height: 80vh;
     }
-
     section#video header {
         display: flex;
         flex-direction: column;
@@ -999,19 +967,15 @@ html {
         justify-content: center;
         width: 70%;
     }
-
     section#video header h2 {
         font-size: 3rem;
     }
-
     section#video header h2 span {
         font-size: 4rem;
     }
-
     section#video video.mobile {
         display: none;
     }
-
     section#video video.desktop {
         display: inherit;
         position: absolute;
@@ -1022,25 +986,22 @@ html {
         transform: translate(-50%, 0);
         object-fit: cover;
         z-index: 0;
-
         filter: brightness(.6);
     }
-
     .custom-shape-divider-top-1742927720 svg {
         height: 40px;
     }
-
     .custom-shape-divider-bottom-1743079326 svg {
         height: 40px;
     }
 }
 
-/* =========================
-   🖤 FOOTER
-========================= */
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 
 .footer {
-    background: #f4f2ee; /* mesmo fundo do site */
+    background: #f4f2ee;
     padding: 2rem 0;
     border-top: 1px solid #6b5b55;
 }
@@ -1051,105 +1012,4 @@ html {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5px;
-}
-
-/* =========================
-   💎 SERVIÇOS
-========================= */
-
-#servicos {
-  background: var(--bg-white);
-}
-
-#servicos header {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-#servicos h2 {
-  font-size: 3rem;
-  color: #5E0006;
-  margin-bottom: 1rem;
-}
-
-#servicos header p {
-  font-size: 1.5rem;
-  color: #6e5c55;
-}
-
-/* GRID SERVIÇO */
-.servico {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  margin-bottom: 6rem;
-}
-
-/* IMAGEM */
-.servico-image {
-  width: 100%;
-  min-height: 350px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-}
-
-/* TEXTO */
-.servico-text {
-  text-align: left;
-}
-
-.servico-text h3 {
-  font-size: 2.4rem;
-  color: #5E0006;
-  margin-bottom: 2rem;
-}
-
-/* ETAPAS */
-.etapa {
-  margin-bottom: 2rem;
-}
-
-.etapa h4 {
-  font-size: 1.6rem;
-  color: #5E0006;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.etapa ul {
-  padding-left: 1rem;
-}
-
-.etapa li {
-  font-size: 1.4rem;
-  color: #453933;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
-  opacity: 0.85;
-}
-
-/* DESKTOP */
-@media (min-width: 1080px) {
-  .servico {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
-  .servico.invertido {
-    direction: rtl;
-  }
-
-  .servico.invertido .servico-text {
-    direction: ltr;
-  }
-
-  .servico-image {
-    height: 100%;
-    min-height: 500px;
-  }
-
-  .servico-text {
-    padding: 4rem;
-  }
 }
