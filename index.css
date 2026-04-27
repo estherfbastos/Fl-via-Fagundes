@@ -1058,6 +1058,29 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.servico-intro {
+  max-width: 100%;
+}
+
+.etapas-grid {
+  width: 100%;
+}
+
+.servico-resultado {
+  text-align: center;
+}
+
+.btn-servico {
+  align-self: center;
 }
 
 /* TAG */
@@ -1157,9 +1180,9 @@ button {
     gap: 5rem;
   }
 
-  .servico.invertido {
-    direction: rtl;
-  }
+ .servico.invertido {
+  direction: initial;
+}
 
   .servico.invertido .servico-text {
     direction: ltr;
