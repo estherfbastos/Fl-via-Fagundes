@@ -1079,10 +1079,6 @@ button {
   text-align: center;
 }
 
-.btn-servico {
-  align-self: center;
-}
-
 /* TAG */
 .tag-servico {
   font-size: 1.2rem;
@@ -1166,7 +1162,7 @@ button {
 
 /* BOTÃO */
 .btn-servico {
-  align-self: flex-start;
+  align-self: center;
   padding: 1.2rem 2.4rem;
   border-radius: 999px;
   font-size: 1.3rem;
