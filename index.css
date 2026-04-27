@@ -1098,14 +1098,14 @@ button {
   background: #faf7f5;
   padding: 1.8rem;
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0,0,0,0.04);
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* HOVER PREMIUM */
 .etapa-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
 /* TÍTULO CARD */
@@ -1150,6 +1150,7 @@ button {
 
 /* DESKTOP */
 @media (min-width: 1080px) {
+
   .servico {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1187,6 +1188,7 @@ button {
 
 /* MOBILE REFINADO */
 @media (max-width: 600px) {
+
   #servicos {
     padding: 6rem 1.5rem;
   }
@@ -1202,6 +1204,8 @@ button {
   .etapa-card {
     padding: 1.5rem;
   }
+
+}
 }/* ==========================================================================
    FOOTER
    ========================================================================== */
